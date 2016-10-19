@@ -14,7 +14,7 @@ def queryAge():
     '''
 
     curAge = input('Enter your current age: ')
-    while curAge <= 0:
+    while curAge <= 0 or type(curAge) != int:
         print 'please input a valid age'
         curAge =  input('Enter your current age: ')
 
