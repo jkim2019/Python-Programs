@@ -12,11 +12,11 @@ def queryDetails():
     '''
         queries user for name and age
     '''
-    myName = input('Enter your name: ')
+    myName = raw_input('Enter your name: ')
     curAge = input('Enter your current age: ')
     while curAge <= 0 or type(curAge) != int:
         print 'please input a valid age'
-        curAge =  input('Enter your current age: ')
+        curAge =  raw_input('Enter your current age: ')
 
     year = calcYear(curAge)
     repeatAns(myName, year)
@@ -33,5 +33,3 @@ def repeatAns(name, year):
     while numRepeat > 0:
         print "%s will turn 100 years old in the year %d." % (name, year)
         numRepeat -= 1
-
-queryDetails()
